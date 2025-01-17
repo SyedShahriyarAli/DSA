@@ -35,11 +35,15 @@ def print_linked_list(head: Node):
 
 # Initialize a Linked List
 
-head = Node(1)
+head = Node()
 currentNode = head
 
-for i in range(2, 6):
-    currentNode.next = Node(i)
+for i in range(1, 6):
+    currentNode.value = i
+
+    if i < 5:
+        currentNode.next = Node()
+
     currentNode = currentNode.next
 
 # Print Linked List Before Reverse
